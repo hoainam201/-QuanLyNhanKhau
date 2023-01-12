@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="800.0" prefWidth="739.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.covidControllers.ChiTietController">
+   <children>
+      <Label layoutX="171.0" layoutY="14.0" text="Thông tin người theo dõi cách ly" textFill="RED">
+         <font>
+            <Font name="System Bold" size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="54.0" text="ID:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="28.0" layoutY="88.0" text="Họ tên:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <VBox layoutX="6.0" layoutY="123.0" prefHeight="700.0" prefWidth="733.0">
+         <children>
+            <Label text="Khai báo cách ly:" textFill="#0f0aff">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="23.0" />
+               </VBox.margin>
+            </Label>
+            <TableView fx:id="cachLyTable" prefHeight="131.0" prefWidth="752.0">
+              <columns>
+                <TableColumn fx:id="thoiGianBatDauCachLy" prefWidth="146.0" text="Thời gian bắt đầu" />
+                <TableColumn fx:id="thoiGianKetThucCachLy" prefWidth="153.0" text="Thời gian kết thúc" />
+                  <TableColumn fx:id="mucDo" prefWidth="90.0" text="Mức độ" />
+                  <TableColumn fx:id="diaDiemCachLy" prefWidth="342.0" text="Địa điểm cách ly" />
+              </columns>
+            </TableView>
+            <Label layoutX="33.0" layoutY="10.0" text="Khai báo lộ trình:" textFill="#0f0aff">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="23.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <TableView fx:id="loTrinhTable" layoutX="10.0" layoutY="44.0" prefHeight="168.0" prefWidth="762.0">
+               <columns>
+                  <TableColumn fx:id="thoiGianBatDauLoTrinh" prefWidth="146.0" text="Thời gian bắt đầu" />
+                  <TableColumn fx:id="thoiGianKetThucLoTrinh" prefWidth="153.0" text="Thời gian kết thúc" />
+                  <TableColumn fx:id="diaDiem" prefWidth="433.0" text="Địa điểm" />
+               </columns>
+            </TableView>
+            <Label layoutX="33.0" layoutY="238.0" text="Khai báo sức khỏe:" textFill="#0f0aff">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="23.0" top="15.0" />
+               </VBox.margin>
+            </Label>
+            <AnchorPane prefHeight="258.0" prefWidth="733.0">
+               <children>
+                  <Label layoutX="24.0" layoutY="1.0" text="Triệu chứng:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="21.0" layoutY="108.0" text="Người tiếp xúc:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nguoiTiepXuc" layoutX="228.0" layoutY="108.0" prefHeight="21.0" prefWidth="197.0">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="21.0" layoutY="158.0" text="Tiểu sử bệnh:">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Label>
+                  <CheckBox fx:id="tc1" layoutX="237.0" layoutY="3.0" mnemonicParsing="false" text="Ho" />
+                  <CheckBox fx:id="tc2" layoutX="326.0" layoutY="3.0" mnemonicParsing="false" text="Khó thở" />
+                  <CheckBox fx:id="tc3" layoutX="423.0" layoutY="3.0" mnemonicParsing="false" text="Đau họng" />
+                  <CheckBox fx:id="tc4" layoutX="236.0" layoutY="45.0" mnemonicParsing="false" text="Sốt" />
+                  <CheckBox fx:id="tc5" layoutX="326.0" layoutY="45.0" mnemonicParsing="false" text="Không có triệu chứng " />
+                  <CheckBox fx:id="bn1" layoutX="234.0" layoutY="160.0" mnemonicParsing="false" text="Gan" />
+                  <CheckBox fx:id="bn2" layoutX="308.0" layoutY="161.0" mnemonicParsing="false" text="Thận" />
+                  <CheckBox fx:id="bn3" layoutX="363.0" layoutY="160.0" mnemonicParsing="false" text="Phổi" />
+                  <CheckBox fx:id="bn4" layoutX="440.0" layoutY="160.0" mnemonicParsing="false" text="Tim Mạch" />
+                  <CheckBox fx:id="bn5" layoutX="234.0" layoutY="202.0" mnemonicParsing="false" text="Cao huyết áp" />
+                  <CheckBox fx:id="bn6" layoutX="363.0" layoutY="202.0" mnemonicParsing="false" text="Tiểu đường" />
+                  <CheckBox fx:id="bn7" layoutX="234.0" layoutY="236.0" mnemonicParsing="false" text="Không có bệnh nền" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <Label fx:id="ID" layoutX="107.0" layoutY="54.0" text="30">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="hoTen" layoutX="107.0" layoutY="88.0" text="Họ tên:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

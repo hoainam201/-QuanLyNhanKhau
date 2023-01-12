@@ -1,0 +1,13 @@
+.leftPaneLogin{
+    -fx-background-color: #3b3b3b;
+}
+
+.right__pane__login{
+    -fx-background-color: #666666;
+}
+.button{
+    -fx-background-color: #e3607e;
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: white;
+}

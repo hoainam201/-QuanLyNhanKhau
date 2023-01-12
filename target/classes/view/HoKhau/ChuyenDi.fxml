@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="442.0" prefWidth="966.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.hoKhauControllers.ChuyenDiController">
+   <children>
+      <Label layoutX="23.0" layoutY="19.0" text="Chọn hộ khẩu:">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <TableView fx:id="table" layoutX="13.0" layoutY="49.0" onMouseClicked="#chon" prefHeight="331.0" prefWidth="504.0">
+        <columns>
+          <TableColumn fx:id="maHoKhauColumn" prefWidth="101.0" text="Mã hộ khẩu" />
+          <TableColumn fx:id="hoTenChuHoColumn" prefWidth="179.0" text="Họ tên chủ hộ" />
+            <TableColumn fx:id="diaChiColumn" prefWidth="223.0" text="Địa chỉ" />
+        </columns>
+      </TableView>
+      <Label layoutX="550.0" layoutY="56.0" text="Mã hộ khẩu:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="550.0" layoutY="91.0" text="Họ tên chủ hộ:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="551.0" layoutY="149.0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="550.0" layoutY="128.0" text="Địa chỉ hiện tại:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="550.0" layoutY="168.0" text="Địa chỉ chuyển đến:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="550.0" layoutY="209.0" text="Lý do chuyển đi:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <TextField fx:id="maHoKhau" layoutX="713.0" layoutY="53.0" prefHeight="26.0" prefWidth="214.0" />
+      <TextField fx:id="tenChuHo" layoutX="713.0" layoutY="88.0" prefHeight="26.0" prefWidth="214.0" />
+      <TextField fx:id="diaChiHienTai" layoutX="713.0" layoutY="125.0" prefHeight="26.0" prefWidth="214.0" />
+      <TextField fx:id="diaChiChuyenDen" layoutX="713.0" layoutY="165.0" prefHeight="26.0" prefWidth="214.0" />
+      <Label layoutX="934.0" layoutY="58.0" text="(*)" textFill="RED" />
+      <Label layoutX="934.0" layoutY="93.0" text="(*)" textFill="RED" />
+      <Label layoutX="934.0" layoutY="130.0" text="(*)" textFill="RED" />
+      <Label layoutX="934.0" layoutY="170.0" text="(*)" textFill="RED" />
+      <Label layoutX="934.0" layoutY="211.0" text="(*)" textFill="RED" />
+      <TextArea fx:id="lyDoChuyenDi" layoutX="713.0" layoutY="212.0" prefHeight="169.0" prefWidth="214.0" wrapText="true" />
+      <Button fx:id="huyButton" layoutX="789.0" layoutY="402.0" mnemonicParsing="false" onAction="#huy" text="Hủy" />
+      <Button layoutX="848.0" layoutY="402.0" mnemonicParsing="false" onAction="#xacNhan" text="Xác nhận" fx:id="xacNhanButton" />
+   </children>
+</AnchorPane>

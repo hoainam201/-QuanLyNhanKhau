@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="375.0" prefWidth="642.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.covidControllers.ThemMoiController">
+   <children>
+      <Label layoutX="37.0" layoutY="37.0" text="Số CMT/ CCCD:">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font></Label>
+      <TextField fx:id="soCMTText" layoutX="150.0" layoutY="32.0" prefHeight="26.0" prefWidth="304.0" />
+      <Label layoutX="469.0" layoutY="37.0" text="(*)" textFill="RED" />
+      <Label layoutX="39.0" layoutY="105.0" text="Họ tên:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="144.0" text="Thời gian test:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="39.0" layoutY="188.0" text="Kết quả test:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="270.0" text="Hình thức test:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <DatePicker fx:id="thoiGianTestDP" layoutX="188.0" layoutY="141.0" prefHeight="26.0" prefWidth="289.0" />
+      <Button layoutX="430.0" layoutY="327.0" mnemonicParsing="false" onAction="#xacNhan" text="Xác nhận" fx:id="xacNhanButton" />
+      <Button fx:id="huyButton" layoutX="532.0" layoutY="327.0" mnemonicParsing="false" onAction="#huy" text="Hủy" />
+      <ImageView fx:id="checkedIcon" fitHeight="36.0" fitWidth="36.0" layoutX="579.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/checked.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="503.0" layoutY="33.0" mnemonicParsing="false" onAction="#check" text="Check" />
+      <TextField fx:id="hinhThucTestText" layoutX="188.0" layoutY="267.0" prefHeight="26.0" prefWidth="289.0" />
+      <Label fx:id="hoTenLB" layoutX="186.0" layoutY="103.0" prefHeight="25.0" prefWidth="271.0">
+         <font>
+            <Font size="16.0" />
+         </font></Label>
+      <ComboBox fx:id="ketQuaTestCB" layoutX="188.0" layoutY="186.0" prefWidth="150.0" />
+      <Label layoutX="39.0" layoutY="229.0" text="Mức độ: ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="mucDoCB" layoutX="188.0" layoutY="227.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
